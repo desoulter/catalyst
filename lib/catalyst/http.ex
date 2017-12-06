@@ -37,7 +37,7 @@ defmodule Catalyst.Http do
   end
   defp handle_response(response) do
     case response do
-      {:ok, {status_line, _headers, body}} -> {status_line, body}
+      {:ok, {status_line, headers, body}} -> {status_line, headers, body}
       {:error, error} -> error
     end
   end
